@@ -1,0 +1,50 @@
+create database SurgeArresters;
+use SurgeArresters;
+
+create table Monitor(
+cpf int(11) not null,
+nome char(30),
+crea int(10),
+telegram char(15),
+primary key (cpf)
+) ENGINE=InnoDB;
+
+create table telefone(
+cpf int(11) not null,
+numero int(13) not null,
+foreign key(cpf) references Monitor(cpf),
+primary key (numero)
+)ENGINE=InnoDB;
+
+create table ParaRaios(
+cod_PR int(10) not null,
+localizacao char(30),
+estado bool,
+primary key (cod_PR)
+) ENGINE=InnoDB;
+
+create table Desconexao(
+cod_Desc int(10) not null,
+PR int(10) not null,
+instInicio timestamp,
+instFim timestamp,
+primary key (cod_Desc),
+foreign key(PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB;
+
+create table Sobretensao(
+cod_ST int(10) not null,
+PR int(10) not null,
+instOcorrencia timestamp,
+primary key (cod_ST),
+foreign key(PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB;
+
+create table Monitora(
+cod_Monitoria int(10) not null,
+Monitor int(11),
+PR int(10),
+primary key (cod_Desc),
+foreign key (Monitor) references Monitor(cpf),
+foreign key (PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB;
