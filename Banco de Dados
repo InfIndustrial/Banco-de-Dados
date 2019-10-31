@@ -1,0 +1,52 @@
+####################Criação do Banco de Dados#####################################
+CREATE DATABASE SurgeArresters;
+use SurgeArresters;
+
+CREATE TABLE Monitor(
+cpf bigint(11) NOT NULL,
+nome varchar(30),
+crea bigint(10),
+telegram varchar(15),
+primary key (cpf)
+) ENGINE=InnoDB;
+
+CREATE TABLE telefone(
+cpf bigint(11) NOT NULL,
+numero bigint(13) NOT NULL,
+foreign key(cpf) references Monitor(cpf),
+primary key (numero)
+)ENGINE=InnoDB;
+
+CREATE TABLE ParaRaios(
+cod_PR int NOT NULL AUTO_INCREMENT,
+localizacao varchar(30),
+estado boolean,
+primary key (cod_PR)
+) ENGINE=InnoDB, AUTO_INCREMENT = 100001;
+
+CREATE TABLE Desconexao(
+cod_Desc int NOT NULL AUTO_INCREMENT,
+PR int NOT NULL,
+instInicio timestamp,
+instFim timestamp,
+primary key (cod_Desc),
+foreign key(PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB, AUTO_INCREMENT = 200001;
+
+CREATE TABLE Sobretensao(
+cod_ST int NOT NULL AUTO_INCREMENT,
+PR int NOT NULL,
+instOcorrencia timestamp,
+primary key (cod_ST),
+foreign key(PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB, AUTO_INCREMENT = 300001;
+
+CREATE TABLE Monitora(
+cod_Monitoria int NOT NULL AUTO_INCREMENT,
+monitor bigint,
+PR int,
+primary key (cod_Monitoria),
+foreign key (Monitor) references Monitor(cpf),
+foreign key (PR) references ParaRaios(cod_PR)
+) ENGINE=InnoDB, AUTO_INCREMENT = 400001;
+####################Criação do Banco de Dados#####################################
