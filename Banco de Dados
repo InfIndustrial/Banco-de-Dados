@@ -50,3 +50,134 @@ foreign key (Monitor) references Monitor(cpf),
 foreign key (PR) references ParaRaios(cod_PR)
 ) ENGINE=InnoDB, AUTO_INCREMENT = 400001;
 ####################Criação do Banco de Dados#####################################
+
+###########################Inserindo Dados########################################
+INSERT INTO monitor VALUES (00100200301,'Giovanny Marcellus', 102030001, '@gmarcellus');
+INSERT INTO monitor VALUES (00100200302,'Evellyne Alves', 102030002, '@ealves');
+INSERT INTO monitor VALUES (00100200303,'Stayner Nóbrega', 102030003, '@snobrega');
+INSERT INTO monitor VALUES (00100200304,'Valmir do Nascimento', 102030004, '@vnascimento');
+INSERT INTO monitor VALUES (00100200305,'Giordano Nóbrega', 102030005, '@gnobrega');
+INSERT INTO monitor VALUES (00100200306,'Vagne Lira', 102030006, '@vlira');
+INSERT INTO monitor VALUES (00100200307,'Laécio Henrique', NULL, '@lhenrique');
+INSERT INTO monitor VALUES (00100200308,'Lizandra Santos', NULL, '@lsantos');
+INSERT INTO monitor VALUES (00100200309,'Danilo Santos', 102030007, '@dsantos');
+INSERT INTO monitor VALUES (00100200310,'Edson Guedes', 102030008, '@eguedes');
+INSERT INTO monitor VALUES (00100200311,'Marcus Vinicius', NULL, '@mvinicius');
+INSERT INTO monitor VALUES (00100200312,'Samuel Melo', 102030009, '@smelo');
+INSERT INTO monitor VALUES (00100200313,'Luis Felipe', NULL, '@lfelipe');
+INSERT INTO monitor VALUES (00100200314,'Vicente Moises', NULL, '@vmoises');
+INSERT INTO monitor VALUES (00100200315,'Scorpion', NULL, '@scorpionMK');
+INSERT INTO monitor VALUES (00100200316,'Sub-Zero', NULL, '@subzeroMK');
+INSERT INTO monitor VALUES (00100200317,'Kung Lao', NULL, '@kunglaoMK');
+
+INSERT INTO telefone VALUES (00100200301,0558399998801);
+INSERT INTO telefone VALUES (00100200302,0558399998802);
+INSERT INTO telefone VALUES (00100200303,0558399998803);
+INSERT INTO telefone VALUES (00100200304,0558399998804);
+INSERT INTO telefone VALUES (00100200305,0558399998805);
+INSERT INTO telefone VALUES (00100200306,0558399998806);
+INSERT INTO telefone VALUES (00100200307,0558399998807);
+INSERT INTO telefone VALUES (00100200308,0558399998808);
+INSERT INTO telefone VALUES (00100200309,0558399998809);
+INSERT INTO telefone VALUES (00100200310,0558399998810);
+INSERT INTO telefone VALUES (00100200311,0558399998811);
+INSERT INTO telefone VALUES (00100200312,0558399998812);
+INSERT INTO telefone VALUES (00100200313,0558399998813);
+INSERT INTO telefone VALUES (00100200314,0558399998814);
+
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', FALSE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 1', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 2', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 2', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 2', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 2', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', FALSE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação Campina Grande 3', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação UFCG', TRUE);
+INSERT INTO ParaRaios(localizacao,estado) VALUES ('Subestação UFCG', TRUE);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100001);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100002);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100003);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100004);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100005);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100006);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100007);
+INSERT INTO monitora(monitor,PR) VALUES (00100200301, 100008);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200311, 100001);
+INSERT INTO monitora(monitor,PR) VALUES (00100200311, 100002);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200312, 100003);
+INSERT INTO monitora(monitor,PR) VALUES (00100200312, 100004);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200313, 100005);
+INSERT INTO monitora(monitor,PR) VALUES (00100200313, 100006);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200314, 100007);
+INSERT INTO monitora(monitor,PR) VALUES (00100200314, 100008);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200302, 100009);
+INSERT INTO monitora(monitor,PR) VALUES (00100200302, 100010);
+INSERT INTO monitora(monitor,PR) VALUES (00100200302, 100011);
+INSERT INTO monitora(monitor,PR) VALUES (00100200302, 100012);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200309, 100009);
+INSERT INTO monitora(monitor,PR) VALUES (00100200309, 100010);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200310, 100011);
+INSERT INTO monitora(monitor,PR) VALUES (00100200310, 100012);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100013);
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100014);
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100015);
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100016);
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100017);
+INSERT INTO monitora(monitor,PR) VALUES (00100200304, 100018);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200306, 100013);
+INSERT INTO monitora(monitor,PR) VALUES (00100200306, 100014);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200307, 100015);
+INSERT INTO monitora(monitor,PR) VALUES (00100200307, 100016);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200308, 100017);
+INSERT INTO monitora(monitor,PR) VALUES (00100200308, 100018);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200303, 100019);
+INSERT INTO monitora(monitor,PR) VALUES (00100200303, 100020);
+
+INSERT INTO monitora(monitor,PR) VALUES (00100200305, 100019);
+INSERT INTO monitora(monitor,PR) VALUES (00100200305, 100020);
+
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 02:05:00');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-21 07:05:02');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 03:07:00');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 01:05:01');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 01:08:05');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 05:03:03');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100015,'2019-10-20 03:09:09');
+
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100020,'2019-10-20 02:05:00');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100020,'2019-10-21 07:05:02');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100020,'2019-10-20 03:07:00');
+
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100009,'2019-10-20 01:05:01');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100009,'2019-10-20 01:08:05');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100009,'2019-10-20 05:03:03');
+INSERT INTO Sobretensao(PR,instOcorrencia) VALUES (100009,'2019-10-20 03:09:09');
+
+INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100012,'2019-10-15 04:45:29','2019-10-16 12:19:29');
+INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100018,'2019-10-20 03:23:43','2019-10-20 21:34:43');
+INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100019,'2019-10-22 19:21:02','2019-10-28 16:12:24');
+###########################Inserindo Dados########################################
