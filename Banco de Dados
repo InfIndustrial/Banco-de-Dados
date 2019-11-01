@@ -181,3 +181,22 @@ INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100012,'2019-10-15 04:45:
 INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100018,'2019-10-20 03:23:43','2019-10-20 21:34:43');
 INSERT INTO Desconexao(PR,instInicio, instFim) VALUES (100019,'2019-10-22 19:21:02','2019-10-28 16:12:24');
 ###########################Inserindo Dados########################################
+
+###########################Consultas########################################
+#Consulta 1: quais os para raios monitorados por cada monitor:
+#Esta consulta vai resultar uma tebela indicando o nome do monitor e os para-raios sob sua supervisão
+#Neste banco de dados
+select m.nome as 'Nome', p.cod_PR as 'Para Raios' from monitor as m left join monitora as mtr 
+on mtr.Monitor = m.cpf 
+left join pararaios as p
+on mtr.PR = p.cod_PR
+order by m.nome;
+
+#Consulta 2: Quais as sobretensões dos para-raios com código = 15:
+#Esta consulta irá retornar o código e o instante de ocorrencia de todas as sobretensões que aconteceram no para-raios com código = 15
+select sobretensao.cod_ST as 'Sobretensão', sobretensao.instOcorrencia as 'Instante da Ocorrencia' from sobretensao where sobretensao.PR=100015
+order by sobretensao.instOcorrencia;
+
+#Consulta 3: Quantos para-raios tem em localização = Subestação Campina Grande 1
+select count(*) as 'Quantidade de Para-Raios na Subestação Campina Grande 1' from pararaios where localizacao = 'Subestação Campina Grande 1';
+
